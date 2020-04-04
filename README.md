@@ -3,7 +3,7 @@
 
 > For KU-BIG Members
 
-> DO NOT add any security informations such IP, password in this repository
+> DO NOT add any security informations such as IP, password in this repository
 
 > It will be posted via another private channel
 
