@@ -40,6 +40,15 @@
 
 ### 1. Linux
 
+**ssh 접속**
+
+bash에서 아래와 같이 입력하시면 됩니다.
+
+         ssh ubuntu@[ip address] -p [ssh number] 
+
+접속이 되시면 password를 입력하시고 접속하시면 됩니다.
+
+
 
 ### 2. Windows
 
@@ -63,7 +72,7 @@ cmd를 실행하시면 아래와 같이 입력하시면 됩니다.
 
        ubuntu@[ip address]'s password:    
        
-password를 입력하시면 됩니다.   
+password를 입력하시면 됩니다. (입력하는 비밀번호는 화면상에 나타나지 않습니다.)   
 
 
 성공적이면 아래와 같은 화면이 뜹니다.   
@@ -92,7 +101,9 @@ putty.exe 실행하기
 
 
         login as: ubntu   
-        ubuntu@[ip adress]'s password: GPU 서버 암호 입력하기
+        ubuntu@[ip adress]'s password: GPU 서버 암호 입력하기 (입력하는 비밀번호는 화면상에 나타나지 않음)   
+
+
 
 ---
 
