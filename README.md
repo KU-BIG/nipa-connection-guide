@@ -7,11 +7,13 @@
 
 > It will be posted via another private channel
 
+---
+
 ## Table of Contents
 
 
 - [NIPA server](#nipa-server)
-- [Server Conncetion Guide](#server-connection-guide)
+- [GPU Server Connection](#gpu-server-connection)
 - [Setup](#setup)
 
 ---
@@ -34,7 +36,22 @@
 
 ---
 
-## Server Connection Guide
+## GPU Server Connection
+
+### Linux
+
+
+### Windows
+
+#### Windows10
+- Window10의 경우 Window OpenSSH Client 사용
+- [Window OpenSSH Client 사용하기](https://archwin.net/402)
+
+#### Other Windows
+- 다른 Window 버전의 경우putty사용
+- [Putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+
 
 ---
 
