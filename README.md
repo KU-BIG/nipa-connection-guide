@@ -68,11 +68,31 @@ password를 입력하시면 됩니다.
 
 성공적이면 아래와 같은 화면이 뜹니다.   
 
+![nipa_success](https://user-images.githubusercontent.com/49232148/78502609-ee030400-779c-11ea-9ee8-0369dd27f685.png)
+
+
 #### 2-2. Other Windows
 - 다른 Window 버전의 경우putty사용
 - [Putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
+ 
+ 
+**PuTTY 다운로드**    
 
+본인의 PC 사양에 맞는 PuTTY 버전을 설치    
+
+
+**PuTTY 실행**   
+
+putty.exe 실행하기    
+![putty](https://user-images.githubusercontent.com/49232148/78502825-01629f00-779e-11ea-879e-63857a84a558.png)
+
+
+**PuTTY terminal 접속** 
+
+
+        login as: ubntu   
+        ubuntu@[ip adress]'s password: GPU 서버 암호 입력하기
 
 ---
 
