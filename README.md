@@ -38,16 +38,37 @@
 
 ## GPU Server Connection
 
-### Linux
+### 1. Linux
 
 
-### Windows
+### 2. Windows
 
-#### Windows10
+#### 2-1. Windows10
 - Window10의 경우 Window OpenSSH Client 사용
-- [Window OpenSSH Client 사용하기](https://archwin.net/402)
+- [Window OpenSSH Client 사용하기](https://archwin.net/402)   
 
-#### Other Windows
+**접속방법**
+1. cmd 실행
+2. ssh 접속
+
+cmd를 실행하시면 아래와 같이 입력하시면 됩니다.   
+
+        ssh ubuntu@[ip address] -p [ssh number]   
+        
+예시
+        
+        C:\Users\starl>ssh ubuntu@12.34.56.789 -p 12345
+        
+성공적으로 마치면 아래와 같이 password를 입력하라고 뜹니다.
+
+       ubuntu@[ip address]'s password:    
+       
+password를 입력하시면 됩니다.   
+
+
+성공적이면 아래와 같은 화면이 뜹니다.   
+
+#### 2-2. Other Windows
 - 다른 Window 버전의 경우putty사용
 - [Putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
