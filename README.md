@@ -7,11 +7,10 @@
 
 > It will be posted via another private channel
 
-## Table of Contents (Optional)
+## Table of Contents
 
-> If your `README` has a lot of info, section headers might be nice.
 
-- [Installation](#installation)
+- [NIPA server](#nipa-server)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Team](#team)
@@ -22,22 +21,24 @@
 
 ---
 
-## Example (Optional)
+## NIPA server
 
-```javascript
-// code away!
+- [NIPA server 소개](https://ai-korea.kr/hpc/selectHpc.do)
 
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
+### 서버 스펙
 
----
+- OS: Ubuntu 16.04 LTS(Linux)
+- GPU 할당량: 40 TFLOPS
+- GPU 카드 유형: V100
 
-## Installation
+### 자원 할당 정보
+
+- 서비스 기간: 2020.03.30 ~ 2021.01.31
+- CSP 업체: KT Cloud
+
+
+
+## Server Connection Guide
 
 - All the `code` required to get started
 - Images of what it should look like
