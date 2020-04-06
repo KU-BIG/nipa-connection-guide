@@ -38,7 +38,7 @@
 
 ## GPU Server Connection
 
-### 1. Linux
+## 1. Linux
 
 **ssh 접속**
 
@@ -50,9 +50,9 @@ bash에서 아래와 같이 입력하시면 됩니다.
 
 
 
-### 2. Windows
+## 2. Windows
 
-#### 2-1. Windows10
+### 2-1. Windows10
 - Window10의 경우 Window OpenSSH Client 사용
 - [Window OpenSSH Client 사용하기](https://archwin.net/402)   
 
@@ -80,7 +80,7 @@ password를 입력하시면 됩니다. (입력하는 비밀번호는 화면상�
 ![nipa_success](https://user-images.githubusercontent.com/49232148/78502609-ee030400-779c-11ea-9ee8-0369dd27f685.png)
 
 
-#### 2-2. Other Windows
+### 2-2. Other Windows
 - 다른 Window 버전의 경우putty사용
 - [Putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
