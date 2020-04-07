@@ -42,7 +42,7 @@
 
 아래의 [username], [ip], [port]느 본 가이드에 포함되어 있지 않으며, 개별적으로 공지될 예정입니다.
 
-## 1. Linux
+## 1. MacOs, Ubuntu
 
 **ssh 접속**
 
