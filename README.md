@@ -47,9 +47,9 @@
 **ssh 접속**
 
 Terminal을 열고, bash에서 아래와 같이 입력하시면 됩니다.
-
-         ssh [username]@[ip] -p [port] 
-
+```bash
+$ ssh [username]@[ip] -p [port] 
+```
 접속이 되시면 password를 입력하시고 접속하시면 됩니다.
 
 
@@ -113,4 +113,13 @@ putty.exe 실행하기
 
 ## Setup
 
+---
+
+## 사용량 모니터링
+```bash
+# gpu
+watch -n 1 -d nvidia-smi
+# cpu, ram
+htop
+```
 ---
