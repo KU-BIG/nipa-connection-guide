@@ -38,13 +38,17 @@
 
 ## GPU Server Connection
 
+## 0. 계저 관련
+
+아래의 [username], [ip], [port]느 본 가이드에 포함되어 있지 않으며, 개별적으로 공지될 예정입니다.
+
 ## 1. Linux
 
 **ssh 접속**
 
 bash에서 아래와 같이 입력하시면 됩니다.
 
-         ssh ubuntu@[ip address] -p [ssh number] 
+         ssh [username]@[ip] -p [port] 
 
 접속이 되시면 password를 입력하시고 접속하시면 됩니다.
 
@@ -62,15 +66,15 @@ bash에서 아래와 같이 입력하시면 됩니다.
 
 cmd를 실행하시면 아래와 같이 입력하시면 됩니다.   
 
-        ssh ubuntu@[ip address] -p [ssh number]   
+        ssh [username]@[ip] -p [port]   
         
 예시
         
-        C:\Users\starl>ssh ubuntu@12.34.56.789 -p 12345
+        C:\Users\starl>ssh user@12.34.56.789 -p 12345
         
 성공적으로 마치면 아래와 같이 password를 입력하라고 뜹니다.
 
-       ubuntu@[ip address]'s password:    
+       [username]@[ip]'s password:    
        
 password를 입력하시면 됩니다. (입력하는 비밀번호는 화면상에 나타나지 않습니다.)   
 
@@ -100,8 +104,8 @@ putty.exe 실행하기
 **PuTTY terminal 접속** 
 
 
-        login as: ubntu   
-        ubuntu@[ip adress]'s password: GPU 서버 암호 입력하기 (입력하는 비밀번호는 화면상에 나타나지 않음)   
+        login as: [username]   
+        [username]u@[ip]'s password: GPU 서버 암호 입력하기 (입력하는 비밀번호는 화면상에 나타나지 않음)   
 
 
 
