@@ -46,7 +46,7 @@
 
 **ssh 접속**
 
-bash에서 아래와 같이 입력하시면 됩니다.
+Terminal을 열고, bash에서 아래와 같이 입력하시면 됩니다.
 
          ssh [username]@[ip] -p [port] 
 
