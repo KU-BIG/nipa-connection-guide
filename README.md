@@ -48,7 +48,7 @@
 
 Terminal을 열고, bash에서 아래와 같이 입력하시면 됩니다.
 ```bash
-$ ssh [username]@[ip] -p [port] 
+$ ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L [포트포워딩할 포트2]:localhost:[포트포워딩할 포트2] [username]@[ip] -p [port]
 ```
 접속이 되시면 password를 입력하시고 접속하시면 됩니다.
 
@@ -66,12 +66,15 @@ $ ssh [username]@[ip] -p [port]
 
 cmd를 실행하시면 아래와 같이 입력하시면 됩니다.   
 
-        ssh [username]@[ip] -p [port]   
+        ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L [포트포워딩할 포트2]:localhost:[포트포워딩할 포트2] [username]@[ip] -p [port]
         
 예시
         
-        C:\Users\starl>ssh user@12.34.56.789 -p 12345
+        C:\Users\starl>ssh -L 1234:localhost:1234 -L 5678:localhost:5678 user@12.34.56.789 -p 12345
         
+        
+
+ 
 성공적으로 마치면 아래와 같이 password를 입력하라고 뜹니다.
 
        [username]@[ip]'s password:    
