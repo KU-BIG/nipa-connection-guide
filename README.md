@@ -254,3 +254,6 @@ htop
 
 ---
 ## Server Guide for Administrators
+
+서버 관리자용 가이드   
+- [서버 관리자용 wiki 링크](https://github.com/KU-BIG/nipa-connection-guide/wiki)
