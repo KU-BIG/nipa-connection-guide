@@ -13,8 +13,11 @@
 
 
 - [NIPA server](#nipa-server)
-- [GPU Server Connection](#gpu-server-connection)
+- [Server Connection](#server-connection)
 - [Setup](#setup)
+- [Pyenv Guide](#pyenv-guide)
+- [사용량 모니터링](#사용량-모니터링)
+- [Server Guide for Administrators](#server-guide-for-administrators)
 
 ---
 
@@ -32,11 +35,12 @@
 
 - 서비스 기간: 2020.03.30 ~ 2021.01.31
 - CSP 업체: KT Cloud
+- 열심히 사용하지 않을 경우 다시 회수당할 수 있으므로 모두 많이 사용해 주시길 바랍니다!
 
 
 ---
 
-## GPU Server Connection
+## Server Connection
 
 ## 0. 계정 관련
 
@@ -50,7 +54,37 @@ Terminal을 열고, bash에서 아래와 같이 입력하시면 됩니다.
 ```bash
 $ ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L [포트포워딩할 포트2]:localhost:[포트포워딩할 포트2] [username]@[ip] -p [port]
 ```
-접속이 되시면 password를 입력하시고 접속하시면 됩니다.
+
+또는  
+```bash
+$ ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] [username]@[ip] -p [port]
+```
+
+포트포워딩할 포트 개수는 본인이 원하시는 개수로 선택하시면 됩니다.   
+본인이 jupyter lab 브라우저 한 개만 여실 경우에는 [포트포워딩할 포트1]만 입력하셔도 됩니다.    
+본인이 jupyter lab, tensorboard 2개의 브라우저를 여실 경우에는 [포트포워딩할 포트1], [포트포워딩할 포트2] 두 개를 입력하시면 됩니다.
+만약 더 필요하시다 하면 그 이상으로 사용하시면 됩니다.    
+
+
+접속이 되시면 password를 입력하시고 접속하시면 됩니다.     
+
+
+[포트포워딩 할 포트]로는 본인이 원하시는 임의의 4-5자리 숫자를 입력하시면 됩니다. ex) 2456, 84322   
+후에 jupyter lab처럼 브라우저에서 열어야 하는 프로그램이 있을 경우 브라우저에 
+
+```
+localhost:[포트포워딩할 포트]
+```
+를 입력하시면 됩니다.
+
+예시: 
+```bash
+$ ssh -L 1234:localhost:1234 yeeun.song@12.34.567.890 -p 12345
+```
+```
+localhost:1234
+```
+
 
 
 
@@ -65,12 +99,38 @@ $ ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L 
 2. ssh 접속
 
 cmd를 실행하시면 아래와 같이 입력하시면 됩니다.   
+```
+ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L [포트포워딩할 포트2]:localhost:[포트포워딩할 포트2] [username]@[ip] -p [port]
+```
 
-        ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] -L [포트포워딩할 포트2]:localhost:[포트포워딩할 포트2] [username]@[ip] -p [port]
-        
-예시
-        
-        C:\Users\starl>ssh -L 1234:localhost:1234 -L 5678:localhost:5678 user@12.34.56.789 -p 12345
+
+또는  
+```bash
+ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] [username]@[ip] -p [port]
+```
+
+포트포워딩할 포트 개수는 본인이 원하시는 개수로 선택하시면 됩니다.   
+본인이 jupyter lab 브라우저 한 개만 여실 경우에는 [포트포워딩할 포트1]만 입력하셔도 됩니다.    
+본인이 jupyter lab, tensorboard 2개의 브라우저를 여실 경우에는 [포트포워딩할 포트1], [포트포워딩할 포트2] 두 개를 입력하시면 됩니다.
+만약 더 필요하시다 하면 그 이상으로 사용하시면 됩니다.   
+
+[포트포워딩 할 포트]로는 본인이 원하시는 임의의 4-5자리 숫자를 입력하시면 됩니다. ex) 2456, 84322   
+후에 jupyter lab 연결할 때와 같이 브라우저에서 열어야 하는 프로그램이 있을 경우 브라우저에 
+
+```
+localhost:[포트포워딩할 포트]
+```
+를 입력하시면 됩니다.
+
+
+예시: 
+```
+C:\Users\starl>ssh -L 1234:localhost:1234 -L 5678:localhost:5678 user@12.34.56.789 -p 12345
+```
+
+```
+localhost:1234
+```
         
         
 
@@ -114,7 +174,66 @@ putty.exe 실행하기
 
 ---
 
-## Setup
+## Setup   
+### Password Change   
+반드시 기본 비밀번호에서 변경 부탁드립니다
+```bash
+[bible2@host1 bible2]$ passwd
+Changing password for user bible2.
+Changing password for bible2
+(current) UNIX password:  (기존의 패스워드입력)
+New password: (새로운 패스워드 입력)
+Retype new password: (새로운 패스워드 재입력)
+passwd: all authentication tokens updated successfully.
+[bible2@host1 bible2]$
+```
+
+---
+## Pyenv Guide
+1. pyenv 설치
+- pyenv : 관리자 권한(root)없이 원하는 python 버전을 사용하기 위한 도구
+- pyenv-virtualenv : 격리된 파이썬 실행환경을 만들어줌. 패키지 사이의 충동을 막을수 있고, 전역 환경에 불필요한 패키지를 설치하지 않아도 됨. 여러명이서 서버를 사용하기 위하여 반드시 필요한 환경. 
+```bash
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.profile
+$ source ~/.profile
+$ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+```
+
+2. 파이썬 설치
+```bash
+$ pyenv install 3.7.3
+```
+
+3. 사용할 버전 지정
+```bash
+$ pyenv global 3.7.3  # 항상 이 버전을 사용
+$ pyenv shell 3.7.3  # 이 세션에서만 사용
+```
+
+4. virtual env 생성
+```bash
+$ pyenv virtualenv [venv 이름]
+```
+
+5. virtual env 목록 확인
+```bash
+$ pyenv virtualenvs
+```
+
+6. virtual env 진입
+```bash
+$ pyenv activate [venv 이름]
+```
+
+7. 사용
+```bash
+([venv 이름]) pip3 install jupyterlab
+([venv 이름]) pip3 install sklearn
+```
+
 
 ---
 
@@ -126,3 +245,8 @@ watch -n 1 -d nvidia-smi
 htop
 ```
 ---
+
+
+
+---
+## Server Guide for Administrators
