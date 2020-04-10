@@ -234,8 +234,8 @@ $ pyenv activate [venv 이름]
 
 7. 사용
 ```bash
-([venv 이름]) pip3 install jupyterlab
-([venv 이름]) pip3 install sklearn
+pip3 install jupyterlab
+pip3 install sklearn
 ```
 
 
