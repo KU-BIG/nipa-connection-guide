@@ -199,7 +199,7 @@ passwd: all authentication tokens updated successfully.
 - pyenv-virtualenv : 격리된 파이썬 실행환경을 만들어줌. 패키지 사이의 충동을 막을수 있고, 전역 환경에 불필요한 패키지를 설치하지 않아도 됨. - 여러명이서 서버를 사용하기 위하여 반드시 필요한 환경.    
 - [pyenv virtualenv 설명](http://guswnsxodlf.github.io/pyenv-virtualenv-autoenv)
 - [pyenv 설명](https://velog.io/@ssseungzz7/pyenv%EC%99%80-pyenv-virtualenv%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-p3k15vjigb)   
-**서버를 공유해서 사용하는 것이기 때문에 pyenv-virtualenv 밖에서 작업하지 않도록 주의해주시길 바랍니다. 개발환경을 바꾸시면 공용 서버라서 다시 설정하는데 어려움이 존재할 수 있습니다.**
+- **서버를 공유해서 사용하는 것이기 때문에 pyenv-virtualenv 밖에서 작업하지 않도록 주의해주시길 바랍니다. 개발환경을 바꾸시면 공용 서버라서 다시 설정하는데 어려움이 존재할 수 있습니다.**
 
 1. virtualenv 목록 확인
 ```bash
