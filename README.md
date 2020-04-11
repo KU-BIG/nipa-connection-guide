@@ -194,51 +194,72 @@ passwd: all authentication tokens updated successfully.
 
 ---
 ## Pyenv Guide
-1. pyenv 설치
-- pyenv : 관리자 권한(root)없이 원하는 python 버전을 사용하기 위한 도구
-- pyenv-virtualenv : 격리된 파이썬 실행환경을 만들어줌. 패키지 사이의 충동을 막을수 있고, 전역 환경에 불필요한 패키지를 설치하지 않아도 됨. 여러명이서 서버를 사용하기 위하여 반드시 필요한 환경. 
-```bash
-$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.profile
-$ source ~/.profile
-$ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-```
+### pyenv 실행
+- pyenv : 관리자 권한(root)없이 원하는 python 버전을 사용하기 위한 도구   
+- pyenv-virtualenv : 격리된 파이썬 실행환경을 만들어줌. 패키지 사이의 충동을 막을수 있고, 전역 환경에 불필요한 패키지를 설치하지 않아도 됨. - 여러명이서 서버를 사용하기 위하여 반드시 필요한 환경.    
+- [pyenv virtualenv 설명](http://guswnsxodlf.github.io/pyenv-virtualenv-autoenv)
+- [pyenv 설명](https://velog.io/@ssseungzz7/pyenv%EC%99%80-pyenv-virtualenv%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-p3k15vjigb)   
+**서버를 공유해서 사용하는 것이기 때문에 pyenv-virtualenv 밖에서 작업하지 않도록 주의해주시길 바랍니다. 개발환경을 바꾸시면 공용 서버라서 다시 설정하는데 어려움이 존재할 수 있습니다.**
 
-2. 파이썬 설치
-```bash
-$ pyenv install 3.7.3
-```
-
-3. 사용할 버전 지정
-```bash
-$ pyenv global 3.7.3  # 항상 이 버전을 사용
-$ pyenv shell 3.7.3  # 이 세션에서만 사용
-```
-
-4. virtual env 생성
-```bash
-$ pyenv virtualenv [venv 이름]
-```
-
-5. virtual env 목록 확인
+1. virtualenv 목록 확인
 ```bash
 $ pyenv virtualenvs
 ```
+처음 계정이 주어졌을 때 default virtualenv로 kubig-venv를 만들어놓았습니다.   
+이 virtualenv를 사용하셔도 좋고, 원하시면 본인이 추가적으로 만드시면 됩니다.  
 
-6. virtual env 진입
+2. virtualenv 진입
 ```bash
 $ pyenv activate [venv 이름]
 ```
 
-7. 사용
-```bash
-pip3 install jupyterlab
-pip3 install sklearn
+예시
+```
+$ pyenv activate kubig-venv
+```
+
+성공적으로 실행되었다면 아래와 같이 실행될 것입니다.
+```
+(kubig-venv) [username]@[server name]:~$
 ```
 
 
+3. 사용
+```bash
+(kubig-venv) [username]@[server name]:~$ pip3 install jupyterlab
+(kubig-venv) [username]@[server name]:~$ pip3 install sklearn
+```
+
+4. jupyter lab 실행
+```
+ (kubig-venv) [username]@[server name]:~$ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
+```
+
+5. virtualenv 벗어나기
+```
+(kubig-venv) [username]@[server name]:~$ pyenv deactivate
+```
+
+**꼭 이 virtualenv 안에서 작업 부탁드립니다.**   
+**혹시 개별 유저들의 virtualenv 밖에서의 작업을 제한할 수 있는 방법을 아시는 분은 연락주시면 감사하겠습니다.**
+
+
+### 새로운 virtualenv 만들기
+
+1. virtualenv 만들기
+```
+$ pyenv virtualenv my-first-venv
+```
+
+2. virtualenv 목록 확인
+```
+$ pyenv virtualenvs
+```
+
+3. virtualenv 진입
+```bash
+$ pyenv activate [venv 이름]
+```
 ---
 
 ## 사용량 모니터링
