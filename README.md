@@ -281,6 +281,11 @@ ubuntu 계정의 pip.conf 에 있는 정상적인 미러 서버를 copy하는 co
 $ cp -r /home/ubuntu/.pip  /home/[username]
 ```
 
+예시  
+```
+$ cp -r /home/ubuntu/.pip  /home/david.kim
+```
+
 ---
 
 ## 사용량 모니터링
@@ -296,6 +301,7 @@ htop
 admin:    
 - 송예은, yeeunsong1019@gmail.com   
 - 유현우, hyeon95y@gmail.com    
+- 정재원
 
 
 ---
