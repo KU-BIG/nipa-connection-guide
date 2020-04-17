@@ -16,6 +16,7 @@
 - [Server Connection](#server-connection)
 - [Setup](#setup)
 - [Pyenv Guide](#pyenv-guide)
+- [Error Guide)(#error)
 - [사용량 모니터링](#사용량-모니터링)
 - [Server Guide for Administrators](#server-guide-for-administrators)
 
@@ -262,6 +263,24 @@ $ pyenv virtualenvs
 $ pyenv activate [venv 이름]
 ```
 ---
+## Error
+
+### pyenv: command not found
+run following commands   
+```bash
+$ export PATH="~/.pyenv/bin:$PATH"
+$ eval "$(pyenv init -)"
+```
+
+### pip install 속도가 느린 경우
+pip.conf 파일에 미러 서버가 미설정 되어있는 문제입니다.     
+아래 command를 치시면 해결됩니다.     
+ubuntu 계정의 pip.conf 에 있는 정상적인 미러 서버를 copy하는 command입니다.   
+```bash
+$ cp -r /home/ubuntu/.pip  /home/[username]
+```
+
+---
 
 ## 사용량 모니터링
 ```bash
@@ -272,6 +291,10 @@ htop
 ```
 ---
 
+## Contact
+admin:    
+- 송예은, yeeunsong1019@gmail.com   
+- 유현우, hyeon95y@gmail.com    
 
 
 ---
