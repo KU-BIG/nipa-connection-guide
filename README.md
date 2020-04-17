@@ -266,14 +266,14 @@ $ pyenv activate [venv 이름]
 ---
 ## Error
 
-### pyenv: command not found
+### 1. pyenv: command not found
 run following commands   
 ```bash
 $ export PATH="~/.pyenv/bin:$PATH"
 $ eval "$(pyenv init -)"
 ```
 
-### pip install 속도가 느린 경우
+### 2. pip install 속도가 느린 경우
 pip.conf 파일에 미러 서버가 미설정 되어있는 문제입니다.     
 아래 command를 치시면 해결됩니다.     
 ubuntu 계정의 pip.conf 에 있는 정상적인 미러 서버를 copy하는 command입니다.   
