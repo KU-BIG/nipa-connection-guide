@@ -16,8 +16,9 @@
 - [Server Connection](#server-connection)
 - [Setup](#setup)
 - [Pyenv Guide](#pyenv-guide)
-- [Error Guide)(#error)
+- [Error Guide](#error)
 - [사용량 모니터링](#사용량-모니터링)
+- [Contact](#contact)
 - [Server Guide for Administrators](#server-guide-for-administrators)
 
 ---
