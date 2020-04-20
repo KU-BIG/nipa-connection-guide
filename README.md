@@ -15,6 +15,7 @@
 - [NIPA server](#nipa-server)
 - [Server Connection](#server-connection)
 - [Setup](#setup)
+- [Anaconda Guide](#anaconda-guide)
 - [Pyenv Guide](#pyenv-guide)
 - [Error Guide](#error)
 - [사용량 모니터링](#사용량-모니터링)
@@ -194,6 +195,38 @@ Retype new password: (새로운 패스워드 재입력)
 passwd: all authentication tokens updated successfully.
 [bible2@host1 bible2]$
 ```
+---
+
+## Anaconda Guide
+- 기존의 pyenv 사용 중 tensorflow 사용중 에러가 발생하는 문제가 발생     
+- Keras는 문제없이 작동되지만, tensorflow 사용 시도 시 cudnn과 cuda version compatibility 문제로 gpu 사용이 불가능하여 anaconda 계정을 추가    
+- 본인의 계정 중 [First name].[Last Name].conda 계정이 아나콘다 환경이 설정된 계정입니다.    
+- tensorflow 사용을 원하시면 위의 계정을 사용하시길 추천드립니다.   
+- 설치 시 참고 사이트
+1. [Anaconda 설치](https://www.linuxhelp.com/how-to-install-python-anaconda-in-ubuntu-16-04)
+2. [Anaconda for multi users](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/admin-multi-user-install.html)   
+- anaconda: 격리된 python 실행환경을 만들어주며, admin 권한 없이 파이썬 작업이 가능하도록 도와준다. 패키지 간의 충돌 문제 해결. pyenv의 상위 호환 버전이라고 생각하시면 쉽습니다.   
+   
+
+
+
+
+
+0. 계정 directory로 이동
+```
+$ cd /home/[First name].[Last Name].conda/anaconda3
+```
+
+1. 설치된 package 확인하기를 희망하면
+```
+$ conda list
+```
+
+2. jupyter lab 연결
+```
+$ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
+```
+
 
 ---
 ## Pyenv Guide
