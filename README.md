@@ -226,10 +226,6 @@ $ conda list
 $ conda install tensorflow
 ```
 
-```
-$ conda install keras-gpu
-```
-
 3) jupyter lab 연결
 ```
 $ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
