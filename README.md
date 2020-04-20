@@ -198,14 +198,13 @@ passwd: all authentication tokens updated successfully.
 ---
 
 ## Anaconda Guide
-- 기존의 pyenv 사용 중 tensorflow 사용중 에러가 발생하는 문제가 발생     
-- Keras는 문제없이 작동되지만, tensorflow 사용 시도 시 cudnn과 cuda version compatibility 문제로 gpu 사용이 불가능하여 anaconda 계정을 추가    
-- 본인의 계정 중 [First name].[Last Name].conda 계정이 아나콘다 환경이 설정된 계정입니다.    
-- tensorflow 사용을 원하시면 위의 계정을 사용하시길 추천드립니다.   
+- 기존의 pyenv 사용 시 tensorflow와 cuda, cudnn version compatibility error 문제 발생     
+- 따라서 기존 계정 외에 tensorflow 사용이 가능한 anaconda 계정을 추가    
+- 본인의 계정 중 [First name].[Last Name].conda 계정이 아나콘다 환경이 설정된 계정입니다.     
 - 설치 시 참고 사이트
 1. [Anaconda 설치](https://www.linuxhelp.com/how-to-install-python-anaconda-in-ubuntu-16-04)
 2. [Anaconda for multi users](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/admin-multi-user-install.html)   
-- anaconda: 격리된 python 실행환경을 만들어주며, admin 권한 없이 파이썬 작업이 가능하도록 도와준다. 패키지 간의 충돌 문제 해결. pyenv의 상위 호환 버전이라고 생각하시면 쉽습니다.   
+- anaconda: 격리된 python 실행환경을 만들어주며, admin 권한 없이 파이썬 작업이 가능하도록 도와준다. pyenv의 상위 호환 버전이라고 생각하시면 쉽습니다.   
    
 
 
@@ -217,22 +216,21 @@ passwd: all authentication tokens updated successfully.
 $ cd /home/[First name].[Last Name].conda/anaconda3
 ```
 
-1. 설치된 package 확인하기를 희망하면
+1) 설치된 package 확인하기를 희망하면
 ```
 $ conda list
 ```
 
-2-1. tensorflow 설치
+2) tensorflow/keras 설치
 ```
 $ conda install tensorflow
 ```
 
-2-2. keras 설치
 ```
 $ conda install keras-gpu
 ```
 
-2. jupyter lab 연결
+3) jupyter lab 연결
 ```
 $ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
 ```
