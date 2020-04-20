@@ -222,6 +222,16 @@ $ cd /home/[First name].[Last Name].conda/anaconda3
 $ conda list
 ```
 
+2-1. tensorflow 설치
+```
+$ conda install tensorflow
+```
+
+2-2. keras 설치
+```
+$ conda install keras-gpu
+```
+
 2. jupyter lab 연결
 ```
 $ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
