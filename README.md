@@ -364,7 +364,7 @@ $ pyenv activate kubig-venv
 ```
 
 **꼭 이 virtualenv 안에서 작업 부탁드립니다.**   
-**혹시 개별 유저들의 virtualenv 밖에서의 작업을 제한할 수 있는 방법을 아시는 분은 연락주시면 감사하겠습니다.**
+
 
 
 ### 새로운 virtualenv 만들기
