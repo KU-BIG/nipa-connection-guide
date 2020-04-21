@@ -206,24 +206,105 @@ passwd: all authentication tokens updated successfully.
 2. [Anaconda for multi users](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/admin-multi-user-install.html)   
 - anaconda: 격리된 python 실행환경을 만들어주며, admin 권한 없이 파이썬 작업이 가능하도록 도와준다. pyenv의 상위 호환 버전이라고 생각하시면 쉽습니다.   
    
-
-
-
-
-
-0. 계정 directory로 이동
+   
+   
+### Anaconda 환경 세팅
+#### 1. 계정 홈 디렉토리로 이동
 ```
-$ cd /home/[First name].[Last Name].conda/anaconda3
+$ cd /home/[username]
 ```
 
-1) 설치된 package 확인하기를 희망하면
+예시
 ```
-$ conda list
+$ cd /home/yeeun.song.conda
+```
+반드시 conda용 계정으로 로그인한 상태에서 환경을 세팅하셔야 합니다.   
+
+#### 2. installer download
+```
+$ wget https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh
+``` 
+
+#### 3. run the installer  
+```
+$ sh Anaconda3-5.0.0.1-Linux-x86_64.sh
 ```
 
-2) tensorflow 설치
+installer를 실행시킨 후 몇 가지 설정을 하셔야 합니다.
+1. license term accept   
+yes라고 입력하시면 됩니다.   
 ```
-$ conda install tensorflow
+//licence term accept
+
+Do you accept the license terms? [yes|no]
+[no] > > > 
+Please answer ' yes'  or ' no' :' 
+> > >  yes
+```
+
+2. install location 설정   
+anaconda에서 설치하려는 default location으로 설정하시면 됩니다.   
+ENTER를 누르시면 됩니다.   
+```
+// install location 설정
+Anaconda3 will now be installed into this location:
+/home/[username]/anaconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/[username]/anaconda3] >>>
+```
+3. 패스 설정   
+모든 패키지가 설치 완료되면 path를 설정하는 과정이 나옵니다.   
+위 질문이 나오면 yes라고 입력하시면 됩니다.    
+yes 미입력시 conda command 인식이 불가능합니다.   
+```
+// path 설정
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /root/.bashrc ? [yes|no]
+[no] > > >  yes
+```
+
+
+#### 4. 설치 확인   
+**계정 로그아웃 후** 다시 재접속해서 확인. 
+PATH yes로 미설정 시 conda command 인식 불가능   
+```
+[conda 설치 계정]@[서버 이름]:~/anaconda3 $conda list
+```
+설치된 패키지가 나열되면 성공적으로 설치 완료입니다.
+
+#### 5. conda 가상환경 생성
+```
+$ conda create -n kubig-venv
+```
+
+
+#### 6. 가상환경 진입
+```
+>>> source activate kubig-venv
+```
+
+---
+
+
+### Anaconda 사용하기
+0) 계정 directory로 이동
+```
+$ cd /home/[First name].[Last Name].conda
+```
+
+1) 가상환경 진입
+```
+$ source activate kubig-venv
+```
+
+2) 패키지 설치
+```
+$ pip install tensorflow
+$ pip install sklearn
 ```
 별도 버전 명시 없이 tensorflow를 설치할 경우 2.1버전이 깔립니다.
 2.1버전에서는 from tensorflow import keras를 이용해 keras를 사용하실 수 있습니다.
