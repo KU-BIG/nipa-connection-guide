@@ -303,8 +303,8 @@ $ source activate kubig-venv
 
 2) 패키지 설치
 ```
-$ pip install tensorflow
-$ pip install sklearn
+$ conda install tensorflow
+$ conda install sklearn
 ```
 별도 버전 명시 없이 tensorflow를 설치할 경우 2.1버전이 깔립니다.
 2.1버전에서는 from tensorflow import keras를 이용해 keras를 사용하실 수 있습니다.
