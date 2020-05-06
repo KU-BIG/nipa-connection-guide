@@ -122,7 +122,8 @@ ssh -L [포트포워딩할 포트1]:localhost:[포트포워딩할 포트1] [user
 본인이 jupyter lab, tensorboard 2개의 브라우저를 여실 경우에는 [포트포워딩할 포트1], [포트포워딩할 포트2] 두 개를 입력하시면 됩니다.   
 만약 더 필요하시다 하면 그 이상으로 사용하시면 됩니다.   
 
-[포트포워딩 할 포트]로는 본인이 원하시는 임의의 4-5자리 숫자를 입력하시면 됩니다. ex) 2456, 84322   
+[포트포워딩 할 포트]로는 본인이 원하시는 임의의 4-5자리 숫자를 입력하시면 됩니다. ex) 2456, 84322     
+주의사항: [포트포워딩 할 포트]가 0으로 시작되지 않도록 주의해주세요. 주피터랩 연결 시 문제가 발생합니다. ex) 01234   
 후에 jupyter lab 연결할 때와 같이 브라우저에서 열어야 하는 프로그램이 있을 경우 브라우저에 
 
 ```
@@ -314,6 +315,9 @@ $ conda install scikit-learn
 $ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
 ```
 
+![jupyter command line](https://user-images.githubusercontent.com/49232148/81133051-71299c80-8f8b-11ea-975c-a909acb59125.png)
+  
+위와 같은 화면이 뜨면 브라우저 창에다가 localhost:[포트포워딩한 포트]를 입력해주시면 됩니다. 가능하면 internet explorer보다는 chrome에서 진행하시길 추천드립니다.   
 
 ---
 ## Pyenv Guide
