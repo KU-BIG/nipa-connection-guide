@@ -305,6 +305,7 @@ $ source activate kubig-venv
 
 2) 패키지 설치
 ```
+$ conda install jupyterlab
 $ conda install tensorflow
 $ conda install scikit-learn
 ```
