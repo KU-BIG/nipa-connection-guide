@@ -211,7 +211,7 @@ passwd: all authentication tokens updated successfully.
    
    
 ### Anaconda 환경 세팅
-#### 1. 계정 홈 디렉토리로 이동
+#### 0. 계정 홈 디렉토리로 이동
 ```
 $ cd /home/[username]
 ```
@@ -221,6 +221,22 @@ $ cd /home/[username]
 $ cd /home/yeeun.song.conda
 ```
 반드시 conda용 계정으로 로그인한 상태에서 환경을 세팅하셔야 합니다.   
+
+
+
+#### 1. pip.conf copy
+ubuntu 계정의 pip.conf 에 있는 정상적인 미러 서버를 copy하는 command입니다.   
+pip command 사용 시 속도가 느린 문제 해결을 위해서 설정해 놓는 command입니다.   
+```bash
+$ cp -r /home/ubuntu/.pip  /home/[username]
+```
+
+예시  
+```
+$ cp -r /home/ubuntu/.pip  /home/david.kim
+```
+
+
 
 #### 2. installer download
 ```
@@ -311,6 +327,8 @@ $ conda install scikit-learn
 ```
 별도 버전 명시 없이 tensorflow를 설치할 경우 2.1버전이 깔립니다.
 2.1버전에서는 from tensorflow import keras를 이용해 keras를 사용하실 수 있습니다.
+
+
 
 3) jupyter lab 연결
 ```
@@ -411,6 +429,22 @@ $ cp -r /home/ubuntu/.pip  /home/[username]
 ```
 $ cp -r /home/ubuntu/.pip  /home/david.kim
 ```
+
+### 3. anaconda 가상환경 사용 시 jupyter에서 tensorflow import가 안될 때    
+아래 링크를 참조하였습니다.   
+- [tensorflow not imported](https://stackoverflow.com/questions/38221181/no-module-named-tensorflow-in-jupyter)
+- [jupyter에서 virtualenv를 못찾을때](https://bbangko.tistory.com/7)   
+
+jupyter lab과 tensorflow가 python을 실행하기 위한 path가 달라서 발생하는 문제입니다.   
+이 경우에는 가상환경에서 나가셔서 작업하시면 해결됩니다.   
+
+```
+[username]@nipa2019-0453:~$ conda install tensorflow
+[username]@nipa2019-0453:~$ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.token='' --allow-root
+```
+
+이 경우에는 가상환경에서 프로그램이 돌아가지 않습니다.   
+아나콘다는 각 계정마다 설치되어 있기 때문에 유저들 간의 환경변수가 꼬일 가능성이 없어 가상환경 밖에서 작업이 가능합니다.   
 
 ---
 
