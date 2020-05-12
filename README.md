@@ -294,30 +294,16 @@ PATH yes로 미설정 시 conda command 인식 불가능
 ```
 설치된 패키지가 나열되면 성공적으로 설치 완료입니다.
 
-#### 5. conda 가상환경 생성
-```
-$ conda create -n kubig-venv
-```
-
-
-#### 6. 가상환경 진입
-```
->>> source activate kubig-venv
-```
 
 ---
 
 
 ### Anaconda 사용하기
-0) 계정 directory로 이동
+1) 계정 directory로 이동
 ```
 $ cd /home/[First name].[Last Name].conda
 ```
 
-1) 가상환경 진입
-```
-$ source activate kubig-venv
-```
 
 2) 패키지 설치
 ```
