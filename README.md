@@ -328,6 +328,7 @@ $ jupyter lab --ip=0.0.0.0 --port=[포트포워딩한 포트] --NotebookApp.toke
 ---
 ## Pyenv Guide
 ### pyenv 실행
+- 본인의 계정 중 [First name].[Last Name] 계정이 pyenv 환경이 설정된 계정입니다.    
 - pyenv : 관리자 권한(root)없이 원하는 python 버전을 사용하기 위한 도구   
 - pyenv-virtualenv : 격리된 파이썬 실행환경을 만들어줌. 패키지 사이의 충동을 막을수 있고, 전역 환경에 불필요한 패키지를 설치하지 않아도 됨. - 여러명이서 서버를 사용하기 위하여 반드시 필요한 환경.    
 - [pyenv virtualenv 설명](http://guswnsxodlf.github.io/pyenv-virtualenv-autoenv)
