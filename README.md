@@ -8,7 +8,7 @@
 > It will be posted via another private channel
 ---   
    
-# [Guide Tab Click](https://github.com/KU-BIG/nipa-connection-guide/wiki)   
+# [Server Guide Tab Click](https://github.com/KU-BIG/nipa-connection-guide/wiki)   
 
 ---
 
