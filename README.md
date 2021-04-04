@@ -16,7 +16,7 @@
 server admin:    
 - 송예은, yeeunsong1019@gmail.com   
 - 유현우, hyeon95y@gmail.com    
-- 정재원
+- 조규선, kyustorm7@gmail.com
 
 
 ---
